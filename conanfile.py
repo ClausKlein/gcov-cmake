@@ -13,6 +13,10 @@ class GCovCMake(ConanFile):
     generators = "cmake"
     url = "http://github.com/polysquare/gcov-cmake"
     licence = "MIT"
+    options = {
+        "dev": [True, False]
+    }
+    default_options = "dev=False"
 
     def source(self):
         zip_name = "gcov-cmake.zip"
